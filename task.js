@@ -1,35 +1,14 @@
-//how to create new objects
+const http = require('http');
 
-var obj = {};
+const hostname = '127.0.0.1';
+const port = 3000;
 
-var nextObj = Object.create(Object.prototype);
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello Leo!');
+});
 
-var lastObj = new Object();
-
-//Assigning Keys and Values
-//Dot Notation
-
-var obj = {};
-
-obj.param = 'new value';
-
-console.log(obj.param); //new value
-
-
-
-//how to create new objects
-
-var obj = {};
-
-var nextObj = Object.create(Object.prototype);
-
-var lastObj = new Object();
-
-//Assigning Keys and Values
-//Dot Notation
-
-var obj = {};
-
-obj.param = 'new value';
-
-console.log(obj.param); //new value
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
