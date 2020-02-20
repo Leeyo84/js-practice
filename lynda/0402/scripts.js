@@ -1,27 +1,28 @@
 // node server
-
-const http = require('http');
-
-const hostname = '127.0.0.1';
-const port = 3000;
-
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello World');
-});
-
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
+// const http = require('http');
+//
+// const hostname = '127.0.0.1';
+// const port = 3000;
+//
+// const server = http.createServer((req, res) => {
+//     res.statusCode = 200;
+//     res.setHeader('Content-Type', 'text/plain');
+//     res.end('Hello World');
+// });
+//
+// server.listen(port, hostname, () => {
+//     console.log(`Server running at http://${hostname}:${port}/`);
+// });
 
 // basic function via lynda course
 
-function findBiggestFraction() {
+function findBiggestFraction(a,b) {
     a>b ? console.log("a: ", a) : console.log("b: ", b);
 }
 
-var a = 3/4;
-var b = 5/7;
+var firstFraction = 3/4;
+var secondFraction = 5/7;
 
-findBiggestFraction();
+findBiggestFraction(firstFraction, secondFraction);
+findBiggestFraction(7/16,13/25);
+findBiggestFraction(1/2,3/4);
